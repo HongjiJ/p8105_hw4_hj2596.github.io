@@ -12,5 +12,5 @@ This website contains the resume and contact information about Hongji Jiang.
 
 # Links
 #### [This Assignment's GitHub Repository](https://github.com/HongjiJ/p8105_mtp_hj2596.git)
-#### [My Linkedin Account]()
+#### [My Linkedin Account](https://www.linkedin.com/in/hongji-jiang-94083a162/)
 #### [My Twitter Account](https://twitter.com/hongjijiang2)

@@ -7,10 +7,6 @@ output:
     source: embed
 ---
 
-# Example of Plotly
-
-We are going to look at Instacart data.
-
 ```{r}
 library(tidyverse)
 library(p8105.datasets)
