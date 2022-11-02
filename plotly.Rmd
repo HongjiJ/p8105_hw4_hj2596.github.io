@@ -1,5 +1,5 @@
 ---
-title: "Ploty"
+title: "Plotly"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
