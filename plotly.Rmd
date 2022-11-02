@@ -1,0 +1,77 @@
+---
+title: "Ploty"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source: embed
+---
+
+# Example of Plotly
+
+We are going to look at Instacart data.
+
+```{r}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+library(flexdashboard)
+```
+
+```{r}
+data("ny_noaa")
+```
+
+
+```{r}
+noaa_df = ny_noaa %>%
+  janitor::clean_names() %>% 
+  separate(col = date, into = c('year','month','day'), sep = "-" , convert = TRUE) %>%
+  mutate (tmax = as.numeric(tmax),
+          tmin = as.numeric(tmin),
+          prcp = as.numeric(prcp),
+          year = as.integer(year),
+          month = as.integer(month),
+          day = as.integer(day)) %>% 
+  mutate(tmax = tmax/10, tmin = tmin/10, prcp = prcp/10)
+
+target = noaa_df %>% 
+  filter(year %in% 1990:1999,
+         month %in% c(12,1,2)) %>% 
+  sample_n(8000) %>%
+  drop_na()
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+target %>%
+  mutate(text_label = str_c("Month:", month, "\nDay ", day)) %>% 
+  plot_ly(
+    x = ~tmin, y = ~tmax, type = "scatter", mode = "markers",
+    color = ~year, text = ~text_label, alpha = 0.5)
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+target %>% 
+  mutate(year = as.factor(year)) %>% 
+  plot_ly(y = ~ tmin, x = ~ year, color = ~ year, text = ~ year, type = "box", colors = "viridis")
+```
+
+### Chart C
+
+```{r}
+target %>% 
+  mutate(year = as.factor(year)) %>% 
+  group_by(year)%>%
+  summarise(average_prcp=mean(prcp))%>%
+  plot_ly(x=~year, y=~average_prcp, type="bar", color = ~year,colors = "viridis")
+```

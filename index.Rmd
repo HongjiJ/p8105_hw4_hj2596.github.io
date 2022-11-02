@@ -8,7 +8,7 @@ output:
 ---
 
 # This is Hongji's awesome website
-This website contains the resume and information about Hongji Jiang.
+This website contains the resume and contact information about Hongji Jiang.
 
 # Links
 #### [This Assignment's GitHub Repository](https://github.com/HongjiJ/p8105_mtp_hj2596.git)
