@@ -7,9 +7,20 @@ output:
     theme: cerulean
 ---
 
-# This page has information about me
+# This page contains information about me
 
 Hello! I am Hongji Jiang, a second year Epi MPH student from Mailman School of Public Health.
 I am interested in data science, and that is why I am currently taking the P8105 data science course. I enjoy taking photographs of animals in the free time.
 
-# My Resume
+## Education 
+### Mailman School of Public Health, New York, U.S. (2021.6 til now)
+MPH in Epidemiology, with Certificate in Applied Biostatistics
+
+## Research Experience
+### Longitudinal Research on Aging Drivers (LongROAD)(2022.6 til now)
+-	Conduct a literature review on the association between veterans and driving safety. Write a literature review draft, illustrating previous public analysis and analyzing potential research points.
+-	Use SAS to manipulate survey data and conduct statistical analysis to research the driving safety issue for veterans.
+
+## Professional Experience
+### Project Management Assistant at Sinotherapeutic Inc. (SinoT), Shangha, China(2020.6-2021.6)
+- Cooperated with the data team to complete statistics–related work through R programming, communicated with other departments to fulfil the requirements of customers, and completed tasks on time. 
