@@ -48,7 +48,8 @@ target %>%
   mutate(text_label = str_c("Month:", month, "\nDay ", day)) %>% 
   plot_ly(
     x = ~tmin, y = ~tmax, type = "scatter", mode = "markers",
-    color = ~year, text = ~text_label, alpha = 0.5)
+    color = ~year, text = ~text_label, alpha = 0.5) %>%
+  layout(title = "Max Temperatures vs Min Temperatures in Winter between year 1900 and year 1999")
 ```
 
 Column {data-width=350}
@@ -59,7 +60,9 @@ Column {data-width=350}
 ```{r}
 target %>% 
   mutate(year = as.factor(year)) %>% 
-  plot_ly(y = ~ tmin, x = ~ year, color = ~ year, text = ~ year, type = "box", colors = "viridis")
+  plot_ly(y = ~ tmin, x = ~ year, color = ~ year, text = ~ year, 
+          type = "box", colors = "viridis") %>%
+  layout(title = "Min Temperatures in Winter in 1990s by year")
 ```
 
 ### Chart C
@@ -69,5 +72,6 @@ target %>%
   mutate(year = as.factor(year)) %>% 
   group_by(year)%>%
   summarise(average_prcp=mean(prcp))%>%
-  plot_ly(x=~year, y=~average_prcp, type="bar", color = ~year,colors = "viridis")
+  plot_ly(x=~year, y=~average_prcp, type="bar", color = ~year,colors = "viridis") %>%
+  layout(title = "Average preciption in Winter in the 1990s by year")
 ```
