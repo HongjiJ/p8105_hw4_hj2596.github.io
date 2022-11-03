@@ -22,5 +22,5 @@ MPH in Epidemiology, with Certificate in Applied Biostatistics
 -	Use SAS to manipulate survey data and conduct statistical analysis to research the driving safety issue for veterans.
 
 ## Professional Experience
-### Project Management Assistant at Sinotherapeutic Inc. (SinoT), Shangha, China(2020.6-2021.6)
+### Project Management Assistant at Sinotherapeutic Inc. (SinoT), Shanghai, China(2020.6-2021.6)
 - Cooperated with the data team to complete statistics–related work through R programming, communicated with other departments to fulfil the requirements of customers, and completed tasks on time. 
